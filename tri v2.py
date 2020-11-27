@@ -28,19 +28,7 @@ def tri(lst):
         lst[a] = nb
     return lst
 
-@Chrono()
-def tri2(lst):
-    for a in range(len(lst)):
-        nb = lst[a]
-        ind = a
-        for b in reversed(range(a, len(lst))):
-            if nb > lst[b]:
-               nb = lst[b]
-               ind = b
-        lst[ind] = lst[a]
-        lst[a] = nb
-    return lst
-    
-print(tri2([randint(0, 1000000000) for a in range(1000)]))
-print(tri2([randint(0, 1000000000) for a in range(1000)]))
-print(tri2([randint(0, 1000000000) for a in range(1000)]))
+
+print(tri([randint(0, 1000000000) for a in range(1000)]))
+print(tri([randint(0, 1000000000) for a in range(1000)]))
+print(tri([randint(0, 1000000000) for a in range(1000)]))
